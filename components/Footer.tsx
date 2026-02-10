@@ -72,7 +72,7 @@ export default function Footer() {
           <h3 className="font-playfair text-3xl md:text-4xl font-bold text-white mb-2">
             {restaurant.name}
           </h3>
-          <p className="font-lato text-accent text-sm uppercase tracking-widest">
+          <p className="text-accent font-lato text-sm uppercase tracking-widest">
             {restaurant.subtitle}
           </p>
           <div className="w-24 h-px bg-accent mx-auto mt-4" />

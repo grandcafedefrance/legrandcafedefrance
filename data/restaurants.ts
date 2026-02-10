@@ -31,7 +31,7 @@ export const RESTAURANTS: Restaurant[] = [
     name: "Le Grand Café de France",
     subtitle: "Zone Piétonne",
     description:
-      "L'institution Niçoise depuis 1975. Une brasserie traditionnelle de prestige au cœur de la zone piétonne.",
+      "Institution niçoise depuis 1975, le  Grand Café de France incarne une brasserie de prestige unique, mêlant élégance, convivialité et charme, au cœur de la zone piétonne, ouverte tous les jours. ",
     image: "/grand-cafe-de-France-pietonne/hero/hero2.jpg",
     imageHero :"/grand-cafe-de-france-jean-medecin/hero/hero2.jpeg",
     address: "7 Rue de France, 06000 Nice",

@@ -71,7 +71,7 @@ export default function RestaurantContent({ restaurant }: RestaurantContentProps
               className="flex-1 space-y-8"
             >
               <div className="w-24 h-px bg-accent" />
-              <h2 className="font-playfair text-4xl md:text-5xl lg:text-6xl font-bold text-primary">
+              <h2 className="font-playfair text-4xl md:text-5xl lg:text-6xl font-bold text-red-brasserie">
                 Notre Histoire
               </h2>
               <p className="font-lato text-lg md:text-xl text-primary/80 leading-relaxed">
@@ -143,7 +143,7 @@ export default function RestaurantContent({ restaurant }: RestaurantContentProps
             className="text-center space-y-8 mb-16"
           >
             <div className="w-24 h-px bg-accent mx-auto" />
-            <h2 className="font-playfair text-4xl md:text-5xl font-bold text-primary">
+            <h2 className="font-playfair text-4xl md:text-5xl font-bold text-red-brasserie">
               Notre Carte
             </h2>
           </motion.div>
@@ -164,7 +164,7 @@ export default function RestaurantContent({ restaurant }: RestaurantContentProps
               className="text-center space-y-8 mb-16"
             >
               <div className="w-24 h-px bg-accent mx-auto" />
-              <h2 className="font-playfair text-4xl md:text-5xl font-bold text-primary">
+              <h2 className="font-playfair text-4xl md:text-5xl font-bold text-red-brasserie">
                 Galerie Photo
               </h2>
               <p className="font-lato text-lg text-primary/70 max-w-2xl mx-auto">

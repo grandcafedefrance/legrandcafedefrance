@@ -19,7 +19,7 @@ export default function ReviewsCarousel() {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <h2 className="font-playfair text-4xl md:text-5xl font-bold text-primary mb-4">
+          <h2 className="font-playfair text-4xl md:text-5xl font-bold text-red-brasserie mb-4">
             Ce que nos clients disent
           </h2>
           <div className="w-24 h-1 bg-accent mx-auto" />
@@ -69,7 +69,7 @@ export default function ReviewsCarousel() {
                 <div className="relative backdrop-blur-md bg-white/80 dark:bg-gray-900/80 rounded-2xl p-6 shadow-xl border border-white/20 hover:shadow-2xl transition-all duration-300 hover:scale-105 flex flex-col h-full min-h-[400px]">
                   {/* Source Badge */}
                   <div className="flex items-center justify-between mb-4">
-                    <span className="text-xs font-semibold px-3 py-1 rounded-full bg-accent/10 text-accent border border-accent/20">
+                    <span className="text-xs font-semibold px-3 py-1 rounded-full bg-accent/10 text-red-brasserie border border-accent/20">
                       {review.source}
                     </span>
                     <span className="text-xs text-gray-500 dark:text-gray-400">
@@ -98,7 +98,7 @@ export default function ReviewsCarousel() {
 
                   {/* Author - stays at bottom */}
                   <div className="flex items-center gap-3 pt-4 border-t border-gray-200/50 dark:border-gray-700/50 mt-auto">
-                    <div className="w-10 h-10 rounded-full bg-gradient-to-br from-accent to-accent/60 flex items-center justify-center text-white font-playfair font-bold">
+                    <div className="w-10 h-10 rounded-full bg-red-brasserie from-accent to-accent/60 flex items-center justify-center text-white font-playfair font-bold">
                       {review.author.charAt(0)}
                     </div>
                     <div>

@@ -26,7 +26,7 @@ export default function MenuClient({ restaurant }: MenuClientProps) {
 
   return (
     <main 
-      className="min-h-screen bg-background text-primary pb-20 selection:bg-accent-menu selection:text-white"
+      className="min-h-screen bg-background text-primary pb-20 selection:bg-red-brasserie selection:text-white"
       suppressHydrationWarning
     >
       {/* Header */}
@@ -34,7 +34,7 @@ export default function MenuClient({ restaurant }: MenuClientProps) {
         <h1 className="font-playfair text-3xl md:text-5xl font-bold mb-3 drop-shadow-sm">
           {restaurant.name}
         </h1>
-        <p className="font-lato text-accent-menu text-xs md:text-sm uppercase tracking-[0.2em] font-medium">
+        <p className="font-lato text-accent text-xs md:text-sm uppercase tracking-[0.2em] font-medium">
           {restaurant.subtitle}
         </p>
       </header>
@@ -51,8 +51,8 @@ export default function MenuClient({ restaurant }: MenuClientProps) {
                   onClick={() => handleCategoryClick(category.category)}
                   className={`px-5 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
                     isActive
-                      ? "bg-accent-menu text-white shadow-md scale-105"
-                      : "bg-white border border-primary/10 text-primary/60 hover:text-primary hover:border-accent-menu/50"
+                      ? "bg-accent text-white shadow-md scale-105"
+                      : "bg-white border border-primary/10 text-primary/60 hover:text-primary hover:border-red-brasserie/50"
                   }`}
                 >
                   {category.category}
@@ -80,10 +80,10 @@ export default function MenuClient({ restaurant }: MenuClientProps) {
                 className="group flex flex-col gap-3 pb-6 border-b border-primary/10 last:border-none last:pb-0"
               >
                 <div className="flex flex-col md:flex-row md:justify-between md:items-baseline gap-2 md:gap-4 w-full">
-                  <h3 className="font-playfair text-xl md:text-2xl font-bold text-primary group-hover:text-accent-menu transition-colors duration-300 break-words">
+                  <h3 className="font-playfair text-xl md:text-2xl font-bold text-primary group-hover:text-red-brasserie transition-colors duration-300 break-words">
                     {item.name}
                   </h3>
-                  <span className="font-lato font-bold text-lg text-accent-menu w-full md:w-auto" style={{ whiteSpace: 'normal', wordBreak: 'break-word' }}>
+                  <span className="font-lato font-bold text-lg text-red-brasserie w-full md:w-auto" style={{ whiteSpace: 'normal', wordBreak: 'break-word' }}>
                     {item.price}
                   </span>
                 </div>

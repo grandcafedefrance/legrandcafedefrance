@@ -103,7 +103,7 @@ export default function RestaurantMenu({ menu }: RestaurantMenuProps) {
               transition-all duration-300 flex items-center gap-2
               ${
                 menuType === 'cuisine'
-                  ? 'bg-accent text-white shadow-md'
+                  ? 'bg-red-brasserie text-white shadow-md'
                   : 'text-primary hover:text-accent'
               }
             `}
@@ -125,7 +125,7 @@ export default function RestaurantMenu({ menu }: RestaurantMenuProps) {
               transition-all duration-300 flex items-center gap-2
               ${
                 menuType === 'bar'
-                  ? 'bg-accent text-white shadow-md'
+                  ? 'bg-red-brasserie text-white shadow-md'
                   : 'text-primary hover:text-accent'
               }
             `}
@@ -156,7 +156,7 @@ export default function RestaurantMenu({ menu }: RestaurantMenuProps) {
                   transition-all duration-300 whitespace-nowrap
                   ${
                     activeCategory === category.category
-                      ? "bg-accent text-white shadow-lg shadow-accent/30"
+                      ? "bg-red-brasserie text-white shadow-lg shadow-accent/30"
                       : menuType === 'bar' 
                         ? "bg-white/10 text-white hover:bg-white/20"
                         : "bg-white/95 text-primary hover:bg-white shadow-md"
