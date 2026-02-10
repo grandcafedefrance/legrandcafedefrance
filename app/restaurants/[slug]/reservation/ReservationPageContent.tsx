@@ -95,7 +95,7 @@ export default function ReservationPageContent({ restaurant }: ReservationPageCo
                   {/* Contact Details */}
                   <div className="grid md:grid-cols-2 gap-6 mb-8">
                     <div className="flex items-start gap-4 p-4 bg-primary/5 rounded-2xl">
-                      <MapPin className="text-accent mt-1 flex-shrink-0" size={24} />
+                      <MapPin className="text-red-brasserie mt-1 flex-shrink-0" size={24} />
                       <div>
                         <p className="font-lato font-semibold text-primary mb-1">Adresse</p>
                         <p className="font-lato text-sm text-primary/70">{restaurant.address}</p>
@@ -103,12 +103,12 @@ export default function ReservationPageContent({ restaurant }: ReservationPageCo
                     </div>
 
                     <div className="flex items-start gap-4 p-4 bg-primary/5 rounded-2xl">
-                      <Phone className="text-accent mt-1 flex-shrink-0" size={24} />
+                      <Phone className="text-red-brasserie mt-1 flex-shrink-0" size={24} />
                       <div>
                         <p className="font-lato font-semibold text-primary mb-1">Téléphone</p>
                         <a
                           href={`tel:${restaurant.phone}`}
-                          className="font-lato text-sm text-accent hover:underline"
+                          className="font-lato text-sm text-red-brasserie hover:underline"
                         >
                           {restaurant.phone}
                         </a>
@@ -118,7 +118,7 @@ export default function ReservationPageContent({ restaurant }: ReservationPageCo
 
                   {/* Opening Hours Info */}
                   <div className="flex items-center justify-center gap-2 p-4 bg-accent/10 rounded-2xl border border-accent/20">
-                    <Clock className="text-accent" size={20} />
+                    <Clock className="text-red-brasserie" size={20} />
                     <p className="font-lato text-sm text-primary">
                       Ouvert du lundi au dimanche
                     </p>
