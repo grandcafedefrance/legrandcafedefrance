@@ -203,24 +203,41 @@ export default function RestaurantContent({ restaurant }: RestaurantContentProps
               </button>
 
               <div id="gallery-scroll" className="flex gap-4 md:gap-6 overflow-x-auto pb-4 snap-x snap-mandatory scrollbar-hide">
-                {restaurant.gallery.map((image, index) => (
-                  <motion.div
-                    key={image}
-                    initial={{ opacity: 0, scale: 0.9 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.5, delay: index * 0.05 }}
-                    className="relative flex-shrink-0 w-[85vw] sm:w-[70vw] md:w-[45vw] lg:w-[30vw] aspect-[4/3] rounded-2xl overflow-hidden snap-center"
-                  >
-                    <Image
-                      src={image}
-                      alt={`${restaurant.name} - Photo ${index + 1}`}
-                      fill
-                      className="object-cover"
-                      sizes="(max-width: 640px) 85vw, (max-width: 768px) 70vw, (max-width: 1024px) 45vw, 30vw"
-                    />
-                  </motion.div>
-                ))}
+                {restaurant.gallery.map((media, index) => {
+                  const isVideo = media.toLowerCase().endsWith('.mp4') || media.toLowerCase().endsWith('.webm') || media.toLowerCase().endsWith('.mov');
+                  
+                  return (
+                    <motion.div
+                      key={media}
+                      initial={{ opacity: 0, scale: 0.9 }}
+                      whileInView={{ opacity: 1, scale: 1 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.5, delay: index * 0.05 }}
+                      className="relative flex-shrink-0 w-[85vw] sm:w-[70vw] md:w-[45vw] lg:w-[30vw] aspect-[4/3] rounded-2xl overflow-hidden snap-center"
+                    >
+                      {isVideo ? (
+                        <video
+                          autoPlay
+                          loop
+                          muted
+                          playsInline
+                          className="absolute inset-0 w-full h-full object-cover"
+                        >
+                          <source src={media} type="video/mp4" />
+                          Votre navigateur ne supporte pas la lecture de vidéos.
+                        </video>
+                      ) : (
+                        <Image
+                          src={media}
+                          alt={`${restaurant.name} - Photo ${index + 1}`}
+                          fill
+                          className="object-cover"
+                          sizes="(max-width: 640px) 85vw, (max-width: 768px) 70vw, (max-width: 1024px) 45vw, 30vw"
+                        />
+                      )}
+                    </motion.div>
+                  );
+                })}
               </div>
               
               {/* Scroll Indicator */}
@@ -248,7 +265,7 @@ export default function RestaurantContent({ restaurant }: RestaurantContentProps
               {/* Left Column - Dish Image (40%) */}
               <div className="lg:w-[40%] relative min-h-[300px] lg:min-h-[600px] order-1">
                 <Image
-                  src="/grand-cafe-de-france-jean-medecin/interieur/interieur4.jpeg"
+                  src="/grand-cafe-de-france-jean-medecin/interieur/interieur5.jpeg"
                   alt="Plat signature Le Grand Café de France"
                   fill
                   className="object-cover w-full"

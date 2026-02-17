@@ -461,10 +461,11 @@ export const RESTAURANTS: Restaurant[] = [
     description:
       "Une atmosphère plus intimiste et chaleureuse. Le lieu idéal pour vos cafés matinaux ou vos cocktails en soirée",
     image: "/grand-cafe-de-France-pietonne/bar/bar.jpg",
-    imageHero :"/grand-cafe-de-france-jean-medecin/hero/hero2.jpeg",
+    imageHero :"/grand-cafe-de-France-jean-medecin/hero/hero2.jpeg",
     address: "7 Rue de France, 06000 Nice",
     phone: "04 92 00 33 00",
     gallery: [
+      
       "/grand-cafe-de-France-pietonne/bar/bar.jpg",
       "/grand-cafe-de-France-pietonne/bar/bar-2.jpg",
       "/grand-cafe-de-France-pietonne/interieur/pour-une-experience-luxueuse.jpg",
@@ -969,13 +970,22 @@ export const RESTAURANTS: Restaurant[] = [
     address: "13 Av Jean-Médecin, 06000 Nice",
     phone: "04 93 53 97 38",
     gallery: [
+      "/grand-cafe-de-france-jean-medecin/exterieur/exterieur-facade2.jpeg",
+      "/grand-cafe-de-france-jean-medecin/exterieur/exterieur-cote.jpeg",
+      "/grand-cafe-de-france-jean-medecin/exterieur/exterieur-facade3.jpeg",
       "/grand-cafe-de-france-jean-medecin/hero/hero.jpeg",
       "/grand-cafe-de-france-jean-medecin/hero/hero2.jpeg",
       "/grand-cafe-de-france-jean-medecin/terasse/terasse1.jpeg",
-      "/grand-cafe-de-france-jean-medecin/terasse/terasse2.jpeg",
+      "/grand-cafe-de-france-jean-medecin/video/facade-cote.mp4",
+      "/grand-cafe-de-france-jean-medecin/interieur/interieur6.jpeg", 
+      "/grand-cafe-de-france-jean-medecin/interieur/interieur5.jpeg", 
+      "/grand-cafe-de-france-jean-medecin/interieur/interieur4.jpeg", 
+      "/grand-cafe-de-france-jean-medecin/ecritaux/ecritau1.jpeg",
+      "/grand-cafe-de-france-jean-medecin/ecritaux/ecritau2.jpeg",
       "/grand-cafe-de-france-jean-medecin/bar/bar .jpeg",
       "/grand-cafe-de-france-jean-medecin/bar/bar2.jpeg",
-      "/grand-cafe-de-france-jean-medecin/interieur/interieur2.jpeg", 
+      "/grand-cafe-de-france-jean-medecin/interieur/interieur7.jpeg",
+      "/grand-cafe-de-france-jean-medecin/video/table.mp4",
     ],
     booking: {
       phone: "0493539738",
