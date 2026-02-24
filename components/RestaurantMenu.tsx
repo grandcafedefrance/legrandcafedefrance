@@ -218,34 +218,32 @@ export default function RestaurantMenu({ menu }: RestaurantMenuProps) {
                 boxShadow: '0 4px 20px rgba(0, 0, 0, 0.1)'
               } : {}}
             >
-              <div className="flex justify-between items-start gap-4">
-                {/* Left: Name & Description */}
-                <div className="flex-1 space-y-2">
-                  <h4 className={`
-                    font-playfair text-lg md:text-xl font-bold group-hover:text-accent transition-colors
-                    ${menuType === 'bar' ? 'text-white' : 'text-primary'}
-                  `}>
-                    {item.name}
-                  </h4>
-                  {item.description && (
-                    <p className={`
-                      font-lato text-sm italic leading-relaxed
-                      ${menuType === 'bar' ? 'text-white/80' : 'text-primary/70'}
-                    `}>
-                      {item.description}
-                    </p>
-                  )}
-                </div>
+              <div className="flex flex-col gap-2">
+                {/* Name */}
+                <h4 className={`
+                  font-playfair text-lg md:text-xl font-bold group-hover:text-accent transition-colors
+                  ${menuType === 'bar' ? 'text-white' : 'text-primary'}
+                `}>
+                  {item.name}
+                </h4>
 
-                {/* Right: Price */}
-                <div className="flex-shrink-0">
-                  <span className={`
-                    font-playfair text-xl md:text-2xl font-bold
-                    ${menuType === 'bar' ? 'text-accent' : 'text-accent'}
+                {/* Description */}
+                {item.description && (
+                  <p className={`
+                    font-lato text-sm italic leading-relaxed
+                    ${menuType === 'bar' ? 'text-white/80' : 'text-primary/70'}
                   `}>
-                    {item.price}
-                  </span>
-                </div>
+                    {item.description}
+                  </p>
+                )}
+
+                {/* Price — wraps freely on mobile */}
+                <span className={`
+                  font-playfair text-base md:text-xl font-bold break-words
+                  ${menuType === 'bar' ? 'text-accent' : 'text-accent'}
+                `}>
+                  {item.price}
+                </span>
               </div>
             </motion.div>
           ))}
