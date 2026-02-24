@@ -96,7 +96,7 @@ export default function RestaurantContent({ restaurant }: RestaurantContentProps
                   className="w-full h-auto max-h-[600px] md:max-h-[75vh] object-cover rounded-2xl shadow-2xl"
                   style={{ pointerEvents: 'none' }}
                 >
-                  <source src="/grand-cafe-de-france-jean-medecin/video/histoire.mp4" type="video/mp4" />
+                  <source src={restaurant.aboutUsVideo} type="video/mp4" />
                   Votre navigateur ne supporte pas la lecture de vidéos.
                 </video>
               </div>

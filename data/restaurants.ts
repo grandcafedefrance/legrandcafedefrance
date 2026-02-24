@@ -14,6 +14,7 @@ export interface Restaurant {
     phone: string;
     email: string;
   };
+  aboutUsVideo: string;
 }
 
 export interface MenuItem {
@@ -32,27 +33,32 @@ export const RESTAURANTS: Restaurant[] = [
     subtitle: "Zone Piétonne",
     description:
       "Institution niçoise depuis 1975, le  Grand Café de France incarne une brasserie de prestige unique, mêlant élégance, convivialité et charme, au cœur de la zone piétonne, ouverte tous les jours. ",
-    image: "/grand-cafe-de-France-pietonne/hero/hero2.jpg",
-    imageHero :"/grand-cafe-de-france-jean-medecin/hero/hero2.jpeg",
+    image: "/grand-cafe-de-France-pietonne/hero/hero.jpg",
+    aboutUsVideo:"/grand-cafe-de-france-pietonne/video/NotreHistoire.mp4",
+    imageHero :"/grand-cafe-de-France-pietonne/hero/hero3.jpg",
     address: "7 Rue de France, 06000 Nice",
     phone: "04 93 53 97 38",
     gallery: [
-      "/grand-cafe-de-France-pietonne/interieur/pour-une-experience-luxueuse.jpg",
-      "/grand-cafe-de-France-pietonne/interieur/le-grand-restaurant-est.jpg",
-      "/grand-cafe-de-France-pietonne/interieur/interior.jpg",
-      "/grand-cafe-de-France-pietonne/interieur/le-grand-restaurant.jpg",
-      "/grand-cafe-de-France-pietonne/Terasse/notre-belle-terrasse.jpg",
-      "/grand-cafe-de-France-pietonne/Terasse/roof-top.jpg",
-      "/grand-cafe-de-France-pietonne/Terasse/notre-terrasse-ouverte.jpg",
+      "/grand-cafe-de-France-pietonne/interieur/interieur.jpg",
+      "/grand-cafe-de-France-pietonne/interieur/interieur2.jpg",
+      "/grand-cafe-de-France-pietonne/interieur/interieur3.jpg",
+      "/grand-cafe-de-France-pietonne/interieur/interieur4.jpg",
+      "/grand-cafe-de-France-pietonne/interieur/interieur5.jpg",
+      "/grand-cafe-de-France-pietonne/interieur/interieur6.jpg",
+      "/grand-cafe-de-France-pietonne/Terasse/terasse1.jpg",
+      "/grand-cafe-de-France-pietonne/Terasse/terasse2.jpg",
+      "/grand-cafe-de-France-pietonne/Terasse/terasse3.jpg",
+      "/grand-cafe-de-France-pietonne/Terasse/terasse4.jpg",
+      "/grand-cafe-de-France-pietonne/Terasse/terasse5.jpg",
+      "/grand-cafe-de-France-pietonne/Terasse/terasse6.jpg",
+      "/grand-cafe-de-France-pietonne/Terasse/terasse7.jpg",
+      "/grand-cafe-de-France-pietonne/Terasse/terasse8.jpg",
       "/grand-cafe-de-France-pietonne/bar/bar.jpg",
       "/grand-cafe-de-France-pietonne/bar/bar-2.jpg",
-      "/grand-cafe-de-France-pietonne/restaurant/terasse-de-nuit.webp",
-      "/grand-cafe-de-France-pietonne/restaurant/terasse.webp",
-      "/grand-cafe-de-France-pietonne/restaurant/terasse2.webp",
+      
     ],
     historyImages: [
-      "/grand-cafe-de-France-pietonne/histoire/histoire.webp",
-      "/grand-cafe-de-France-pietonne/histoire/our-team.jpg",
+      
     ],
     booking: {
       phone: "0493539738",
@@ -460,28 +466,26 @@ export const RESTAURANTS: Restaurant[] = [
     subtitle: "Rina's Bar",
     description:
       "Une atmosphère plus intimiste et chaleureuse. Le lieu idéal pour vos cafés matinaux ou vos cocktails en soirée",
-    image: "/grand-cafe-de-France-pietonne/bar/bar.jpg",
-    imageHero :"/grand-cafe-de-France-jean-medecin/hero/hero2.jpeg",
+    image: "/petit-cafe-de-france/hero/hero2.jpg",
+    aboutUsVideo:"/petit-cafe-de-france/video/notreHistoire.mp4",
+    imageHero :"/petit-cafe-de-france/hero/hero2.jpg",
     address: "7 Rue de France, 06000 Nice",
     phone: "04 92 00 33 00",
     gallery: [
-      
-      "/grand-cafe-de-France-pietonne/bar/bar.jpg",
-      "/grand-cafe-de-France-pietonne/bar/bar-2.jpg",
-      "/grand-cafe-de-France-pietonne/interieur/pour-une-experience-luxueuse.jpg",
-      "/grand-cafe-de-France-pietonne/interieur/le-grand-restaurant-est.jpg",
-      "/grand-cafe-de-France-pietonne/interieur/interior.jpg",
-      "/grand-cafe-de-France-pietonne/interieur/le-grand-restaurant.jpg",
-      "/grand-cafe-de-France-pietonne/Terasse/notre-belle-terrasse.jpg",
-      "/grand-cafe-de-France-pietonne/Terasse/roof-top.jpg",
-      "/grand-cafe-de-France-pietonne/Terasse/notre-terrasse-ouverte.jpg",
-      "/grand-cafe-de-France-pietonne/restaurant/terasse-de-nuit.webp",
-      "/grand-cafe-de-France-pietonne/restaurant/terasse.webp",
-      "/grand-cafe-de-France-pietonne/restaurant/terasse2.webp",
+      "/petit-cafe-de-france/terasse/terasse6.jpg",
+      "/petit-cafe-de-france/terasse/terasse2.jpg",
+      "/petit-cafe-de-france/terasse/terasse1.jpg",
+      "/petit-cafe-de-france/terasse/terasse3.jpg",
+      "/petit-cafe-de-france/terasse/terasse4.jpg",
+      "/petit-cafe-de-france/terasse/terasse5.jpg",
+      "/petit-cafe-de-france/terasse/terasse7.jpg",
+      "/petit-cafe-de-france/terasse/terasse8.jpg",
+      "/petit-cafe-de-france/terasse/terasse9.jpg",
+      "/petit-cafe-de-france/terasse/terasse10.jpg",
+      "/petit-cafe-de-france/terasse/terasse11.jpg",
     ],
     historyImages: [
-      "/grand-cafe-de-France-pietonne/histoire/histoire.webp",
-      "/grand-cafe-de-France-pietonne/histoire/our-team.jpg",
+
     ],
     booking: {
       phone: "0600000000",
@@ -789,29 +793,6 @@ export const RESTAURANTS: Restaurant[] = [
         ],
       },
       {
-        category: "Nos Champagnes (Bouteille 75cl)",
-        items: [
-          { name: "Mercier", price: "100.00€" },
-          { name: "Moët & Chandon Brut", price: "135.00€" },
-          { name: "Veuve Clicquot Brut", price: "190.00€" },
-          { name: "Veuve Clicquot Rosé", price: "210.00€" },
-          { name: "Perrier-Jouët", price: "155.00€" },
-          { name: "Perrier-Jouët Blanc de Blanc", price: "310.00€" },
-          { name: "Perrier-Jouët Belle Epoque Brut", price: "550.00€" },
-          { name: "Perrier-Jouët Belle Epoque Rosé", price: "990.00€" },
-          { name: "Ruinart Brut", price: "180.00€" },
-          { name: "Ruinart Rosé", price: "275.00€" },
-          { name: "Ruinart Blanc de Blanc", price: "320.00€" },
-          { name: "Dom Pérignon", price: "595.00€" },
-          { name: "Krug Grande Cuvée", price: "695.00€" },
-          { name: "Roederer Brut", price: "160.00€" },
-          { name: "Roederer Rosé", price: "190.00€" },
-          { name: "Roederer Cristal", price: "695.00€" },
-          { name: "Rare Millésime 2008", price: "695.00€" },
-          { name: "Laurent-Perrier Grand Siècle", price: "490.00€" },
-        ],
-      },
-      {
         category: "Vins Blancs",
         items: [
           {
@@ -839,9 +820,17 @@ export const RESTAURANTS: Restaurant[] = [
             name: "Bellet AOP (Domaine de la Source - Nice)",
             price: "Btl 59.00€",
           },
+           {
+            name: "Côtes de Provence AOP (Domaine Ott - Clos Mireille)",
+            price: "Btl 89.00€",
+          },
           {
             name: "Côtes de Provence AOP (Clos Réal)",
             price: "Verre 11€ / Carafe 25€ / Btl 42€",
+          },
+           {
+            name: "Côtes de Provence AOP (Clos de Caille)",
+            price: "Btl 100cl   79.00€",
           },
           {
             name: "Sancerre AOP (Paul Vattan)",
@@ -880,7 +869,7 @@ export const RESTAURANTS: Restaurant[] = [
           },
           {
             name: "Bellet AOP (Domaine de la Source - Nice)",
-            price: "Btl 69.00€",
+            price: "Btl 59.00€",
           },
           {
             name: "Côtes de Provence AOP (Clos Réal)",
@@ -966,6 +955,7 @@ export const RESTAURANTS: Restaurant[] = [
     description:
       "L'âme d'une brasserie parisienne, la lumière de la Côte d'Azur. Situé sur la célèbre avenue Jean-Médecin, Le Grand Café de France est le rendez-vous incontournable des amoureux du goût et de l'élégance. Une parenthèse gourmande et raffinée, à toute heure de la journée.",
     image: "/grand-cafe-de-france-jean-medecin/hero/hero.jpeg",
+    aboutUsVideo:"/grand-cafe-de-france-jean-medecin/video/histoire.mp4",
     imageHero :"/grand-cafe-de-france-jean-medecin/terasse/terasse3.jpeg",
     address: "13 Av Jean-Médecin, 06000 Nice",
     phone: "04 93 53 97 38",
@@ -976,16 +966,24 @@ export const RESTAURANTS: Restaurant[] = [
       "/grand-cafe-de-france-jean-medecin/hero/hero.jpeg",
       "/grand-cafe-de-france-jean-medecin/hero/hero2.jpeg",
       "/grand-cafe-de-france-jean-medecin/terasse/terasse1.jpeg",
-      "/grand-cafe-de-france-jean-medecin/video/facade-cote.mp4",
       "/grand-cafe-de-france-jean-medecin/interieur/interieur6.jpeg", 
       "/grand-cafe-de-france-jean-medecin/interieur/interieur5.jpeg", 
       "/grand-cafe-de-france-jean-medecin/interieur/interieur4.jpeg", 
+      "/grand-cafe-de-france-jean-medecin/rooftop/rooftop1.jpg",
+      "/grand-cafe-de-france-jean-medecin/rooftop/rooftop2.jpg",
+      "/grand-cafe-de-france-jean-medecin/rooftop/rooftop3.jpg",
+      "/grand-cafe-de-france-jean-medecin/rooftop/rooftop4.jpg",
+      "/grand-cafe-de-france-jean-medecin/rooftop/rooftop5.jpg",
+      "/grand-cafe-de-france-jean-medecin/rooftop/rooftop6.jpg",
+      "/grand-cafe-de-france-jean-medecin/rooftop/rooftop7.jpg",
+      "/grand-cafe-de-france-jean-medecin/rooftop/rooftop8.jpg",
+      "/grand-cafe-de-france-jean-medecin/rooftop/rooftop9.jpg",
+      "/grand-cafe-de-france-jean-medecin/rooftop/rooftop10.jpg",
+      "/grand-cafe-de-france-jean-medecin/rooftop/rooftop11.jpg",
       "/grand-cafe-de-france-jean-medecin/ecritaux/ecritau1.jpeg",
-      "/grand-cafe-de-france-jean-medecin/ecritaux/ecritau2.jpeg",
       "/grand-cafe-de-france-jean-medecin/bar/bar .jpeg",
       "/grand-cafe-de-france-jean-medecin/bar/bar2.jpeg",
       "/grand-cafe-de-france-jean-medecin/interieur/interieur7.jpeg",
-      "/grand-cafe-de-france-jean-medecin/video/table.mp4",
     ],
     booking: {
       phone: "0493539738",

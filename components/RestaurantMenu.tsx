@@ -12,6 +12,7 @@ interface RestaurantMenuProps {
 export default function RestaurantMenu({ menu }: RestaurantMenuProps) {
   // ÉTAPE 1 : SÉPARATION DES DONNÉES (Hard-Filtering)
   const FOOD_CATEGORIES = [
+    // Grand Café Piétonne & Jean-Médecin
     "Traditions Françaises",
     "Hors d'Oeuvres",
     "Hummus Bar",
@@ -23,14 +24,25 @@ export default function RestaurantMenu({ menu }: RestaurantMenuProps) {
     "Huîtres & Coquillages",
     "Plateaux de Fruits de Mer",
     "Caviars",
-    "Desserts"
+    "Desserts",
+    // Petit Café de France (Rina's Bar)
+    "Les Incontournables",
+    "Pizzas",
+    "Appetizers / Entrées",
+    "Plats / Main Course",
+    "Desserts & Cocktails",
   ];
 
   const DRINK_CATEGORIES = [
+    // Grand Café Piétonne & Jean-Médecin
     "Champagnes",
     "Nos Vins Rouges d'Exception",
     "Vins & Rosés",
-    "Cocktails Signature"
+    "Cocktails Signature",
+    // Petit Café de France (Rina's Bar)
+    "Vins Blancs",
+    "Vins Rouges",
+    "Vins Rosés",
   ];
   
   // Toggle state: 'cuisine' or 'bar'
