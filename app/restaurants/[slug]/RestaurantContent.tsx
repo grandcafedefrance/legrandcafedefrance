@@ -97,7 +97,7 @@ export default function RestaurantContent({ restaurant }: RestaurantContentProps
             >
               <div className="w-24 h-px bg-accent" />
               <h2 className="font-playfair text-4xl md:text-5xl lg:text-6xl font-bold text-red-brasserie">
-                L&apos;Histoire de {restaurant.name} à Nice
+                L&apos;Histoire du {restaurant.name} à Nice
               </h2>
               <p className="font-lato text-lg md:text-xl text-primary/80 leading-relaxed">
                 {restaurant.description}
@@ -169,7 +169,7 @@ export default function RestaurantContent({ restaurant }: RestaurantContentProps
           >
             <div className="w-24 h-px bg-accent mx-auto" />
             <h2 className="font-playfair text-4xl md:text-5xl font-bold text-red-brasserie">
-                Notre Carte : {isRinasBar ? "Cocktails & Bar" : "Brasserie"} à Nice
+                Notre Carte : {isRinasBar ? "Cocktails & Bar" : "Brasserie"} 
             </h2>
           </motion.div>
 
@@ -290,7 +290,7 @@ export default function RestaurantContent({ restaurant }: RestaurantContentProps
               {/* Left Column - Dish Image (40%) */}
               <div className="lg:w-[40%] relative min-h-[300px] lg:min-h-[600px] order-1">
                 <Image
-                  src="/grand-cafe-de-france-jean-medecin/interieur/interieur5.jpeg"
+                  src="/grand-cafe-de-france-jean-medecin/interieur/grand-cafe-france-nice-jean-medecin-salle-interieure-5.jpeg"
                   alt="Plat signature Le Grand Café de France"
                   fill
                   className="object-cover w-full"

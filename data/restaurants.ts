@@ -29,13 +29,13 @@ export interface MenuItem {
 export const RESTAURANTS: Restaurant[] = [
   {
     slug: "grand-cafe-zone-pietonne",
-    name: "Le Grand Café de France",
+    name: "Grand Café de France",
     subtitle: "Zone Piétonne",
     description:
       "Institution niçoise depuis 1975, le  Grand Café de France incarne une brasserie de prestige unique, mêlant élégance, convivialité et charme, au cœur de la zone piétonne, ouverte tous les jours. ",
     image: "/grand-cafe-de-France-pietonne/hero/grand-cafe-france-nice-rue-pietonne-facade-451.jpg",
     aboutUsVideo:"/grand-cafe-de-France-pietonne/video/notre-histoire.mp4",
-    imageHero :"/grand-cafe-de-France-pietonne/hero/grand-cafe-france-nice-rue-pietonne-facade-3.jpg",
+    imageHero :"/grand-cafe-de-France-pietonne/hero/grand-cafe-france-nice-rue-pietonne-facade-451.jpg",
     address: "7 Rue de France, 06000 Nice",
     phone: "04 93 53 97 38",
     gallery: [
@@ -43,7 +43,6 @@ export const RESTAURANTS: Restaurant[] = [
       "/grand-cafe-de-France-pietonne/gallery/grand-cafe-france-nice-rue-pietonne-gallery-2.jpg",
       "/grand-cafe-de-France-pietonne/gallery/grand-cafe-france-nice-rue-pietonne-gallery-3.jpg",
       "/grand-cafe-de-France-pietonne/gallery/grand-cafe-france-nice-rue-pietonne-gallery-4.jpg",
-      "/grand-cafe-de-France-pietonne/gallery/grand-cafe-france-nice-rue-pietonne-gallery-5.jpg",
       "/grand-cafe-de-France-pietonne/gallery/photo-6.mp4",
       "/grand-cafe-de-France-pietonne/gallery/grand-cafe-france-nice-rue-pietonne-gallery-7.jpg",
       "/grand-cafe-de-France-pietonne/gallery/grand-cafe-france-nice-rue-pietonne-gallery-8.jpg",
@@ -473,13 +472,13 @@ export const RESTAURANTS: Restaurant[] = [
   },
   {
     slug: "rina-bar",
-    name: "Le Petit Café de France",
+    name: "Petit Café de France",
     subtitle: "Rina's Bar",
     description:
       "Une atmosphère plus intimiste et chaleureuse. Le lieu idéal pour vos cafés matinaux ou vos cocktails en soirée",
     image: "/petit-cafe-de-france/hero/rinas-bar-nice-rue-pietonne-facade-2.jpg",
     aboutUsVideo:"/petit-cafe-de-france/video/notreHistoire.mp4",
-    imageHero :"/petit-cafe-de-france/hero/rinas-bar-nice-rue-pietonne-facade-2.jpg",
+    imageHero :"/petit-cafe-de-france/gallery/grand-cafe-france-nice-centre-nice-gallery-2.jpg",
     address: "7 Rue de France, 06000 Nice",
     phone: "04 92 00 33 00",
     gallery: [
@@ -960,7 +959,7 @@ export const RESTAURANTS: Restaurant[] = [
   },
   {
     slug: "grand-cafe-jean-medecin",
-    name: "Le Grand Café de France",
+    name: "Grand Café de France",
     subtitle: "Jean-Médecin",
     description:
       "L'âme d'une brasserie parisienne, la lumière de la Côte d'Azur. Situé sur la célèbre avenue Jean-Médecin, Le Grand Café de France est le rendez-vous incontournable des amoureux du goût et de l'élégance. Une parenthèse gourmande et raffinée, à toute heure de la journée.",
