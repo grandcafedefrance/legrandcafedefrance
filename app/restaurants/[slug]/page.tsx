@@ -19,10 +19,32 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       title: "Restaurant non trouvé",
     };
   }
+  
+  const isRinasBar = restaurant.slug === 'rina-bar';
+  const displayTitle = isRinasBar 
+    ? "Rina's Bar Nice | Bar Rue Piétonne – Cocktails & Ambiance"
+    : `${restaurant.name} Nice | Brasserie ${restaurant.subtitle}`;
 
   return {
-    title: `${restaurant.name} - Groupe Grand Café de France`,
-    description: restaurant.description,
+    title: displayTitle,
+    description: restaurant.description.substring(0, 155),
+    alternates: {
+      canonical: `/restaurants/${restaurant.slug}`,
+    },
+    openGraph: {
+      title: displayTitle,
+      description: restaurant.description.substring(0, 155),
+      url: `/restaurants/${restaurant.slug}`,
+      type: "website", 
+      images: [
+        {
+          url: restaurant.imageHero,
+          width: 1200,
+          height: 630,
+          alt: `${restaurant.name} Nice - ${restaurant.subtitle}`,
+        },
+      ],
+    },
   };
 }
 

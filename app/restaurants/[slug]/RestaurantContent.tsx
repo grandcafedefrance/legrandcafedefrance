@@ -8,11 +8,34 @@ import RestaurantMenu from "@/components/RestaurantMenu";
 import ReservationModal from "@/components/ReservationModal";
 import ReviewsCarousel from "@/components/ReviewsCarousel";
 
+import Script from "next/script";
+
 interface RestaurantContentProps {
   restaurant: Restaurant;
 }
 
 export default function RestaurantContent({ restaurant }: RestaurantContentProps) {
+
+  const isRinasBar = restaurant.slug === 'rina-bar';
+  const schemaType = isRinasBar ? ["BarOrPub", "Restaurant"] : "Restaurant";
+  
+  const restaurantSchema = {
+    "@context": "https://schema.org",
+    "@type": schemaType,
+    "name": restaurant.name,
+    "image": `https://www.grandcafe-nice.com${restaurant.imageHero}`,
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": restaurant.address.split(',')[0],
+      "addressLocality": "Nice",
+      "postalCode": "06000",
+      "addressCountry": "FR"
+    },
+    "telephone": restaurant.phone,
+    "servesCuisine": isRinasBar ? "Cocktails & Tapas" : "French",
+    "priceRange": isRinasBar ? "€€" : "€€€",
+    "url": `https://www.grandcafe-nice.com/restaurants/${restaurant.slug}`,
+  };
 
   return (
     <main className="min-h-screen bg-background">
@@ -36,11 +59,13 @@ export default function RestaurantContent({ restaurant }: RestaurantContentProps
           transition={{ duration: 0.8 }}
           className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20 md:pb-32 text-white w-full"
         >
-          <p className="font-lato text-accent text-sm md:text-base uppercase tracking-widest mb-4">
-            {restaurant.subtitle}
-          </p>
+          <span className="inline-block px-4 py-1.5 rounded-full backdrop-blur-md bg-black/30 border border-accent/30 shadow-[0_2px_16px_rgba(0,0,0,0.4)] mb-4">
+            <p className="font-lato text-accent text-sm md:text-base uppercase tracking-widest">
+              {restaurant.subtitle}
+            </p>
+          </span>
           <h1 className="font-playfair text-5xl md:text-7xl lg:text-8xl font-bold mb-6 leading-tight">
-            {restaurant.name}
+            {restaurant.name} <span className="sr-only">Nice {restaurant.subtitle}</span>
           </h1>
           <div className="flex flex-wrap gap-6 text-white/90">
             <div className="flex items-center gap-2">
@@ -72,7 +97,7 @@ export default function RestaurantContent({ restaurant }: RestaurantContentProps
             >
               <div className="w-24 h-px bg-accent" />
               <h2 className="font-playfair text-4xl md:text-5xl lg:text-6xl font-bold text-red-brasserie">
-                Notre Histoire
+                L&apos;Histoire de {restaurant.name} à Nice
               </h2>
               <p className="font-lato text-lg md:text-xl text-primary/80 leading-relaxed">
                 {restaurant.description}
@@ -144,7 +169,7 @@ export default function RestaurantContent({ restaurant }: RestaurantContentProps
           >
             <div className="w-24 h-px bg-accent mx-auto" />
             <h2 className="font-playfair text-4xl md:text-5xl font-bold text-red-brasserie">
-              Notre Carte
+                Notre Carte : {isRinasBar ? "Cocktails & Bar" : "Brasserie"} à Nice
             </h2>
           </motion.div>
 
@@ -310,6 +335,14 @@ export default function RestaurantContent({ restaurant }: RestaurantContentProps
 
       {/* Reviews Section */}
       <ReviewsCarousel />
+      
+      {/* Schema.org JSON-LD Script */}
+      <Script
+        id={`schema-${restaurant.slug}`}
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(restaurantSchema) }}
+        strategy="beforeInteractive"
+      />
     </main>
   );
 }

@@ -2,7 +2,24 @@
 
 import { usePathname } from "next/navigation";
 import Link from "next/link";
-import { MapPin, Phone, Clock, Mail, Instagram, Facebook } from "lucide-react";
+import { MapPin, Phone, Clock, Mail, Instagram, Facebook, Twitter } from "lucide-react";
+
+const TiktokIcon = ({ size = 24, ...props }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={size}
+    height={size}
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    {...props}
+  >
+    <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5" />
+  </svg>
+);
 
 // Configuration des informations par restaurant
 const RESTAURANT_INFO = {
@@ -148,6 +165,24 @@ export default function Footer() {
                 aria-label="Facebook"
               >
                 <Facebook size={18} />
+              </a>
+              <a
+                href="https://x.com/GrandCafeFrance"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:border-accent hover:bg-accent/10 transition-all duration-300"
+                aria-label="Twitter / X"
+              >
+                <Twitter size={18} />
+              </a>
+              <a
+                href="https://www.tiktok.com/@le.grand.cafe.de.france"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:border-accent hover:bg-accent/10 transition-all duration-300"
+                aria-label="TikTok"
+              >
+                <TiktokIcon size={18} />
               </a>
             </div>
             <div className="mt-6">
