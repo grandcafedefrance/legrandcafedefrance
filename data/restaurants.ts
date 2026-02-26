@@ -34,7 +34,7 @@ export const RESTAURANTS: Restaurant[] = [
     description:
       "Institution niçoise depuis 1975, le  Grand Café de France incarne une brasserie de prestige unique, mêlant élégance, convivialité et charme, au cœur de la zone piétonne, ouverte tous les jours. ",
     image: "/grand-cafe-de-France-pietonne/hero/grand-cafe-france-nice-rue-pietonne-facade-451.jpg",
-    aboutUsVideo:"/grand-cafe-de-france-pietonne/video/NotreHistoire.mp4",
+    aboutUsVideo:"/grand-cafe-de-france-pietonne/video/notreHistoire.mp4",
     imageHero :"/grand-cafe-de-France-pietonne/hero/grand-cafe-france-nice-rue-pietonne-facade-3.jpg",
     address: "7 Rue de France, 06000 Nice",
     phone: "04 93 53 97 38",
