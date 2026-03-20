@@ -128,7 +128,7 @@ export default function ReservationPageContent({ restaurant }: ReservationPageCo
                 {/* Right Column - Image (40%) */}
                 <div className="lg:w-[40%] relative min-h-[300px] lg:min-h-[600px] order-1 lg:order-2">
                   <Image
-                    src="/grand-cafe-de-france-jean-medecin/interieur/interieur .jpeg"
+                    src="/grand-cafe-de-france-jean-medecin/interieur/interieur.jpeg"
                     alt={`Intérieur ${restaurant.name}`}
                     fill
                     className="object-cover"

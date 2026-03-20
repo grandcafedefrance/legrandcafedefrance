@@ -1,12 +1,14 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { motion } from "framer-motion";
 import { MapPin, Phone, Clock, ChevronLeft, ChevronRight } from "lucide-react";
 import type { Restaurant } from "@/data/restaurants";
 import RestaurantMenu from "@/components/RestaurantMenu";
 import ReservationModal from "@/components/ReservationModal";
 import ReviewsCarousel from "@/components/ReviewsCarousel";
+import { BASE_URL } from "@/lib/seo";
 
 import Script from "next/script";
 
@@ -18,12 +20,20 @@ export default function RestaurantContent({ restaurant }: RestaurantContentProps
 
   const isRinasBar = restaurant.slug === 'rina-bar';
   const schemaType = isRinasBar ? ["BarOrPub", "Restaurant"] : "Restaurant";
+
+  const normalizedPhone = (() => {
+    // Normalize for JSON-LD schema (E.164). Example: "0762123837" -> "+33762123837".
+    const clean = restaurant.phone.replace(/\s/g, "");
+    if (clean.startsWith("+")) return clean;
+    if (clean.startsWith("0")) return `+33${clean.slice(1)}`;
+    return clean;
+  })();
   
   const restaurantSchema = {
     "@context": "https://schema.org",
     "@type": schemaType,
     "name": restaurant.name,
-    "image": `https://www.grandcafe-nice.com${restaurant.imageHero}`,
+    "image": `${BASE_URL}${restaurant.imageHero}`,
     "address": {
       "@type": "PostalAddress",
       "streetAddress": restaurant.address.split(',')[0],
@@ -31,10 +41,10 @@ export default function RestaurantContent({ restaurant }: RestaurantContentProps
       "postalCode": "06000",
       "addressCountry": "FR"
     },
-    "telephone": restaurant.phone,
+    "telephone": normalizedPhone,
     "servesCuisine": isRinasBar ? "Cocktails & Tapas" : "French",
     "priceRange": isRinasBar ? "€€" : "€€€",
-    "url": `https://www.grandcafe-nice.com/restaurants/${restaurant.slug}`,
+    "url": `${BASE_URL}/restaurants/${restaurant.slug}`,
   };
 
   return (
@@ -320,6 +330,12 @@ export default function RestaurantContent({ restaurant }: RestaurantContentProps
                     email={restaurant.booking.email}
                     slug={restaurant.slug}
                   />
+                  <Link
+                    href={`/menu/${restaurant.slug}`}
+                    className="inline-flex items-center gap-2 px-8 py-4 bg-transparent border-2 border-accent text-accent font-lato text-base font-semibold rounded-full hover:bg-accent hover:text-white transition-all duration-300 hover:scale-105"
+                  >
+                    Voir le menu
+                  </Link>
                   <a
                     href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(restaurant.address)}`}
                     target="_blank"

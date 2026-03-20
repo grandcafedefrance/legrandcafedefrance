@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 import { RESTAURANTS } from "@/data/restaurants";
 import Navbar from "@/components/Navbar";
 import ReservationPageContent from "@/app/restaurants/[slug]/reservation/ReservationPageContent";
+import { BASE_URL } from "@/lib/seo";
 
 export async function generateStaticParams() {
   return RESTAURANTS.map((restaurant) => ({
@@ -19,9 +20,29 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     };
   }
 
+  const title = `Réserver - ${restaurant.name} - Groupe Grand Café de France`;
+  const description = `Réservez votre table au ${restaurant.name}. ${restaurant.description}`;
+
   return {
-    title: `Réserver - ${restaurant.name} - Groupe Grand Café de France`,
-    description: `Réservez votre table au ${restaurant.name}. ${restaurant.description}`,
+    title,
+    description,
+    alternates: {
+      canonical: `${BASE_URL}/restaurants/${slug}/reservation`,
+    },
+    openGraph: {
+      title,
+      description,
+      url: `${BASE_URL}/restaurants/${slug}/reservation`,
+      type: "website",
+      images: [
+        {
+          url: `${BASE_URL}${restaurant.imageHero ?? restaurant.image ?? "/og-default.jpg"}`,
+          width: 1200,
+          height: 630,
+          alt: restaurant.name,
+        },
+      ],
+    },
   };
 }
 

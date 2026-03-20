@@ -1,13 +1,12 @@
 import { MetadataRoute } from 'next';
 import { RESTAURANTS } from '@/data/restaurants';
+import { BASE_URL } from '@/lib/seo';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://www.grandcafe-nice.com'; // Replace with actual production URL when deployed
-
   // Base routes
   const routes: MetadataRoute.Sitemap = [
     {
-      url: baseUrl,
+      url: BASE_URL,
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 1,
@@ -16,11 +15,27 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   // Dynamic restaurant routes
   const restaurantRoutes: MetadataRoute.Sitemap = RESTAURANTS.map((restaurant) => ({
-    url: `${baseUrl}/restaurants/${restaurant.slug}`,
+    url: `${BASE_URL}/restaurants/${restaurant.slug}`,
     lastModified: new Date(),
     changeFrequency: 'monthly',
     priority: 0.8,
   }));
 
-  return [...routes, ...restaurantRoutes];
+  // Reservation routes
+  const reservationRoutes: MetadataRoute.Sitemap = RESTAURANTS.map((restaurant) => ({
+    url: `${BASE_URL}/restaurants/${restaurant.slug}/reservation`,
+    lastModified: new Date(),
+    changeFrequency: 'monthly',
+    priority: 0.7,
+  }));
+
+  // Menu routes
+  const menuRoutes: MetadataRoute.Sitemap = RESTAURANTS.map((restaurant) => ({
+    url: `${BASE_URL}/menu/${restaurant.slug}`,
+    lastModified: new Date(),
+    changeFrequency: 'monthly',
+    priority: 0.7,
+  }));
+
+  return [...routes, ...restaurantRoutes, ...reservationRoutes, ...menuRoutes];
 }

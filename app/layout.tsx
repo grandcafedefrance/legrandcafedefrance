@@ -3,6 +3,7 @@ import { Playfair_Display, Lato } from "next/font/google";
 import "./globals.css";
 import FooterWrapper from "@/components/FooterWrapper";
 import Script from "next/script";
+import { BASE_URL } from "@/lib/seo";
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
@@ -25,14 +26,14 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.grandcafe-nice.com"), // Update with real production domain when known
+  metadataBase: new URL(BASE_URL),
   title: "Groupe Grand Café de France - Restaurants de Luxe à Nice",
   description: "Découvrez nos 3 restaurants d'exception à Nice (Grand Café de France, Le Rooftop) et notre bar intimiste Rina's Bar sur la Rue Piétonne. Une expérience gastronomique unique.",
   keywords: "restaurant Nice, brasserie Nice, rooftop Nice, bar Nice, gastronomie Nice, restaurant luxe, Jean Médecin, Rue Piétonne",
   openGraph: {
     type: "website",
     locale: "fr_FR",
-    url: "/",
+    url: BASE_URL,
     siteName: "Groupe Grand Café de France",
     title: "Groupe Grand Café de France - Restaurants de Luxe à Nice",
     description: "Découvrez nos brasseries d'exception et Rina's Bar à Nice.",
@@ -40,7 +41,7 @@ export const metadata: Metadata = {
     images: [{ url: "/grand-cafe-de-France-pietonne/hero/grand-cafe-france-nice-rue-pietonne-facade-3.jpg" }],
   },
   alternates: {
-    canonical: "/",
+    canonical: `${BASE_URL}/`,
   },
 };
 
@@ -48,8 +49,8 @@ const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
   "name": "Groupe Grand Café de France",
-  "url": "https://www.grandcafe-nice.com",
-  "logo": "https://www.grandcafe-nice.com/logo.png", // Replace when known
+  "url": BASE_URL,
+  "logo": `${BASE_URL}/logo.png`,
   "description": "Groupe de restaurants de luxe et brasseries à Nice, incluant Le Grand Café de France (Jean Médecin & Zone Piétonne), Le Rooftop et Rina's Bar.",
   "address": {
     "@type": "PostalAddress",
@@ -60,7 +61,7 @@ const organizationSchema = {
   "contactPoint": [
     {
       "@type": "ContactPoint",
-      "telephone": "+33-7-62-12-38-37",
+      "telephone": "+33762123837",
       "contactType": "reservations"
     }
   ]

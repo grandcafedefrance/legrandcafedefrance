@@ -3,6 +3,7 @@ import Image from "next/image";
 import { RESTAURANTS } from "@/data/restaurants";
 import Navbar from "@/components/Navbar";
 import RestaurantContent from "./RestaurantContent";
+import { BASE_URL } from "@/lib/seo";
 
 export async function generateStaticParams() {
   return RESTAURANTS.map((restaurant) => ({
@@ -29,12 +30,12 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     title: displayTitle,
     description: restaurant.description.substring(0, 155),
     alternates: {
-      canonical: `/restaurants/${restaurant.slug}`,
+      canonical: `${BASE_URL}/restaurants/${restaurant.slug}`,
     },
     openGraph: {
       title: displayTitle,
       description: restaurant.description.substring(0, 155),
-      url: `/restaurants/${restaurant.slug}`,
+      url: `${BASE_URL}/restaurants/${restaurant.slug}`,
       type: "website", 
       images: [
         {
