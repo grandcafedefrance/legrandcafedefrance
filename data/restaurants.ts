@@ -37,7 +37,7 @@ export const RESTAURANTS: Restaurant[] = [
     aboutUsVideo:"/grand-cafe-de-France-pietonne/video/notre-histoire.mp4",
     imageHero :"/grand-cafe-de-France-pietonne/hero/grand-cafe-france-nice-rue-pietonne-facade-451.jpg",
     address: "7 Rue de France, 06000 Nice",
-    phone: "04 93 53 97 38",
+    phone: "0762123837",
     gallery: [
       "/grand-cafe-de-France-pietonne/gallery/grand-cafe-france-nice-rue-pietonne-gallery-1.jpg",
       "/grand-cafe-de-France-pietonne/gallery/grand-cafe-france-nice-rue-pietonne-gallery-2.jpg",
@@ -71,8 +71,8 @@ export const RESTAURANTS: Restaurant[] = [
       
     ],
     booking: {
-      phone: "0493539738",
-      email: "reservation@grandcafe-nice.com",
+      phone: "0762123837",
+      email: "mickael.cesam@gmail.com",
     },
     menu: [
       {
@@ -480,7 +480,7 @@ export const RESTAURANTS: Restaurant[] = [
     aboutUsVideo:"/petit-cafe-de-france/video/notreHistoire.mp4",
     imageHero :"/petit-cafe-de-france/gallery/grand-cafe-france-nice-centre-nice-gallery-2.jpg",
     address: "7 Rue de France, 06000 Nice",
-    phone: "04 92 00 33 00",
+    phone: "0762123837",
     gallery: [
       "/petit-cafe-de-france/gallery/grand-cafe-france-nice-centre-nice-gallery-1.jpg",
       "/petit-cafe-de-france/gallery/grand-cafe-france-nice-centre-nice-gallery-2.jpg",
@@ -497,8 +497,8 @@ export const RESTAURANTS: Restaurant[] = [
 
     ],
     booking: {
-      phone: "0600000000",
-      email: "reservation@rina-bar.com",
+      phone: "0762123837",
+      email: "mickael.cesam@gmail.com",
     },
     menu: [
       {
@@ -967,7 +967,7 @@ export const RESTAURANTS: Restaurant[] = [
     aboutUsVideo:"/grand-cafe-de-france-jean-medecin/video/histoire.mp4",
     imageHero :"/grand-cafe-de-france-jean-medecin/terasse/grand-cafe-france-nice-jean-medecin-terrasse-3.jpeg",
     address: "13 Av Jean-Médecin, 06000 Nice",
-    phone: "04 93 53 97 38",
+    phone: "0762123837",
     gallery: [
       "/grand-cafe-de-france-jean-medecin/exterieur/grand-cafe-france-nice-jean-medecin-facade-2.jpeg",
       "/grand-cafe-de-france-jean-medecin/exterieur/grand-cafe-france-nice-jean-medecin-facade-537.jpeg",
@@ -990,8 +990,8 @@ export const RESTAURANTS: Restaurant[] = [
       "/grand-cafe-de-france-jean-medecin/interieur/grand-cafe-france-nice-jean-medecin-salle-interieure-7.jpeg",
     ],
     booking: {
-      phone: "0493539738",
-      email: "reservation@grandcafe-nice.com",
+      phone: "0762123837",
+      email: "mickael.cesam@gmail.com",
     },
     menu: [
       {

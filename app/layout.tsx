@@ -60,7 +60,7 @@ const organizationSchema = {
   "contactPoint": [
     {
       "@type": "ContactPoint",
-      "telephone": "+33-4-93-53-97-38",
+      "telephone": "+33-7-62-12-38-37",
       "contactType": "reservations"
     }
   ]

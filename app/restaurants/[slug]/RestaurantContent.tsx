@@ -68,13 +68,16 @@ export default function RestaurantContent({ restaurant }: RestaurantContentProps
             {restaurant.name} <span className="sr-only">Nice {restaurant.subtitle}</span>
           </h1>
           <div className="flex flex-wrap gap-6 text-white/90">
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-black/30 backdrop-blur-md border border-accent/30 shadow-[0_0_24px_rgba(0,0,0,0.25)]">
               <MapPin size={20} className="text-accent" />
               <span className="font-lato text-sm md:text-base">{restaurant.address}</span>
             </div>
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-black/30 backdrop-blur-md border border-accent/30 shadow-[0_0_24px_rgba(0,0,0,0.25)]">
               <Phone size={20} className="text-accent" />
-              <a href={`tel:${restaurant.phone}`} className="font-lato text-sm md:text-base hover:text-accent transition-colors">
+              <a
+                href={`tel:${restaurant.phone}`}
+                className="font-lato text-sm md:text-base hover:text-accent transition-colors"
+              >
                 {restaurant.phone}
               </a>
             </div>
