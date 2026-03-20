@@ -330,12 +330,7 @@ export default function RestaurantContent({ restaurant }: RestaurantContentProps
                     email={restaurant.booking.email}
                     slug={restaurant.slug}
                   />
-                  <Link
-                    href={`/menu/${restaurant.slug}`}
-                    className="inline-flex items-center gap-2 px-8 py-4 bg-transparent border-2 border-accent text-accent font-lato text-base font-semibold rounded-full hover:bg-accent hover:text-white transition-all duration-300 hover:scale-105"
-                  >
-                    Voir le menu
-                  </Link>
+                  
                   <a
                     href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(restaurant.address)}`}
                     target="_blank"
